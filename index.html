@@ -9,6 +9,23 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
   <script src="main.js"></script>
 </head>
+<style>
+    @media only screen and (max-width: 600px){
+    
+      .column-container{
+          flex: none;
+          justify-content: space-around;
+      }
+    }
+
+    @media only screen and (min-width: 600px){
+      
+      .column-container{
+          justify-content: space-around;
+          display: flex;
+      }
+    }
+    </style>
 
 <nav id="navbar">
   <strong>Number</strong> Guesser<br>
@@ -18,21 +35,23 @@
 <main>
   <section class="column-container">
 
-  <div class="first-column">
-  <section class="first_column">
-    <h2>set range Range 1st </h2>
-  </section>
-  <section class="first_column">
+  <div class="firstC">
+    <section class="first-column">
+      <h2>set range Range 1st </h2>
+    </section>
+    <section class="first-column">
       <h2>Current Range</h2>
     </section>
-    <section class="first_column">
-    <h2>LATEST</h2>
-    <section class="first_column">
+    <section class="first-column">
+      <h2>LATEST</h2>
+    <section class="first-column">
   </div>
 
-  <div class="second-column">
+  <div class="secondC">
+    <aside class="second-column">
     <h2>I am the second column</h2>
-    <aside>
+    </aside>
+    <aside class="second-column">
         <h2>Challenger 2nd name</h2>
       </aside>
   </div>

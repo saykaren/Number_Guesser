@@ -2,23 +2,33 @@
 
 #navbar {
   background-color: black;
-  color: pink;
+  color: #DD1972;
   position: fixed;
   width: 100%;
   padding: 20px;
+  text-align: center;
+
+  
 }
 
 /*contains both columns to do flex-box*/
 .column-container {
-  display: flex;
-  justify-content: space-around;
+  
 }
 main {
-  background-color: grey;
+  background-color: #F7F7F7;
+  
   padding-top: 100px;
 }
 
-.first_column {
-  background-color: white;
+.first-column {
+  background-color: #F7F7F7;
+  
+}
+
+.secondC {
+  background-color: #404041;
+}
+.second-column {
   
 }
