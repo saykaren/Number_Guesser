@@ -8,9 +8,14 @@
   padding: 20px;
 }
 
+/*contains both columns to do flex-box*/
+.column-container {
+  display: flex;
+  justify-content: space-around;
+}
 main {
   background-color: grey;
-  width: 50%;
+  padding-top: 100px;
 }
 
 .first_column {
