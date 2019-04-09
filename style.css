@@ -18,17 +18,25 @@
 main {
   background-color: #F7F7F7;
   
-  padding-top: 100px;
+  padding-top: 80px;
+}
+
+.firstC {
+  background-color:  #F7F7F7;
+  border-right: 2px solid black;
 }
 
 .first-column {
-  background-color: #F7F7F7;
+  background-color: white;
   
 }
+
+
 
 .secondC {
   background-color: #404041;
 }
 .second-column {
-  
+  background-color: white;
+  border: 2px solid #404041;
 }
