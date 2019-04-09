@@ -10,14 +10,17 @@
   <script src="main.js"></script>
 </head>
 <style>
+
+  /*mobile size*/
     @media only screen and (max-width: 600px){
     
       .column-container {
           flex: none;
           justify-content: space-around;
       }
-    }
 
+    }
+/*desktop size*/
     @media only screen and (min-width: 600px){
       
       .column-container {
@@ -26,15 +29,16 @@
       }
       .firstC {
         width: 50%;
-    }
+      }
+
     .secondC {
         width: 50%;
     }
     </style>
 
 <nav id="navbar">
-  <strong>Number</strong> Guesser<br>
-  Ultimate Challenger Edition
+  <p id="nav-title"><strong>Number</strong> Guesser<br></p>
+  <p id="nav-sub">--------Ultimate Challenger Edition--------</p>
 </nav>
 
 <main>
