@@ -1,0 +1,19 @@
+
+
+#navbar {
+  background-color: black;
+  color: pink;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+}
+
+main {
+  background-color: grey;
+  width: 50%;
+}
+
+.first_column {
+  background-color: white;
+  
+}
