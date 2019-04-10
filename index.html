@@ -20,6 +20,10 @@
           justify-content: space-around;
       }
 
+      #minMax {
+        display: flex;
+        flex-direction: column;
+      }
     }
 /*desktop size*/
     @media only screen and (min-width: 600px){
@@ -32,6 +36,11 @@
         width: 50%;
         border-right: 2px solid  rgba(97, 97, 97, .5);
       }
+      #minMax {
+        display: flex;
+        flex-direction: row;
+      }
+
 
     .secondC {
         width: 50%;
@@ -48,8 +57,15 @@
 
   <div class="firstC">
     <section class="first-column">
-      <h2>set range Range 1st </h2>
-    </section>
+      <h2> <strong> Set Range </strong></h2>
+      <h3 id="minMax">
+      <label class="inputMinMax" for="minRange">Min Range</label>
+      <input  type="text" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
+      <label class="inputMinMax" for="maxRange">Max Range</label>
+      <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Minimum number">
+    </h3>
+      <button type="button">UPDATE</button>
+      </section>
     <br>
     <section class="first-column">
       <h2>Current Range</h2>
