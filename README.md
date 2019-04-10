@@ -8,6 +8,10 @@ First set the custom range the number will fall within. Then each player will in
 
 # Built With
 
+# Comp
+Customer had the following as a comp
+<img src="http://frontend.turing.io/assets/images/projects/number-guesser/week2-numberguesser-01.jpg">
+
 # Authors
 Karen Garcia
 

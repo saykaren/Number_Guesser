@@ -1,5 +1,7 @@
 
-
+html {
+  font-family: 'Open Sans', sans-serif;
+}
 #navbar {
   background-color: black;
   position: fixed;
@@ -9,6 +11,7 @@
   border-top: 20px solid #6E6E6E;
   border-right: 4px solid #6E6E6E;
   border-left: 4px solid #6E6E6E;
+  line-height: 0.5px;
 }
 
 #nav-title {
@@ -31,7 +34,7 @@
 main {
   background-color: #F7F7F7;
   border: 4px solid #6E6E6E;
-  padding-top: 200px;
+  padding-top: 132px;
 }
 
 .firstC {
@@ -39,21 +42,23 @@ main {
   text-align: center;
   border: 2px solid #F7F7F7;
   padding: 10px;
+  
 }
 
 .first-column {
   background-color: white;
-  
+  border: 2px solid rgba(97, 97, 97, .5);
+    
 }
 
 
 
 .secondC {
-  background-color: #404041;
+  background-color: rgba(97, 97, 97, .65);
   text-align: center;
   padding: 10px;
 }
 .second-column {
   background-color: white;
-  border: 2px solid #404041;
+  border: 2px solid rgba(97, 97, 97, .80);
 }
