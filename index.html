@@ -32,19 +32,27 @@
           display: flex;
           justify-content: space-around;
       }
+
       .firstC {
         width: 50%;
         border-right: 2px solid  rgba(97, 97, 97, .5);
       }
+
       #minMax {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;  
       }
 
+      #minMax>* {
+        flex: 1 1 300px;
+      }
 
+    #minMax :nth-child(2) { order:3; }
+    
     .secondC {
         width: 50%;
     }
+  } 
     </style>
 
 <nav id="navbar">

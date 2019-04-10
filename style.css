@@ -31,6 +31,24 @@ html {
   
 }
 
+button {
+  color: #FFFFFF;
+  background-color: #6E6E6E;  
+  border-radius: 12px;
+  width: 92px;
+  height: 27px;
+}
+
+button:active {
+  color: #FFFFFF;
+  background-color: #D0D2D3;
+}
+
+button:hover {
+  color: #FFFFFF;
+  background-color: #DD1972;
+}
+
 main {
   background-color: #F7F7F7;
   border: 4px solid #6E6E6E;
