@@ -24,6 +24,13 @@
         display: flex;
         flex-direction: column;
       }
+
+      #challengerOneInput {
+        display: flex;
+        flex-direction: column;
+    }
+      
+
     }
 /*desktop size*/
     @media only screen and (min-width: 600px){
@@ -52,6 +59,7 @@
     .secondC {
         width: 50%;
     }
+
   } 
     </style>
 
@@ -66,23 +74,36 @@
   <div class="firstC">
     <section class="first-column">
       <h2> <strong> Set Range </strong></h2>
-      <h3 id="minMax">
-      <label class="inputMinMax" for="minRange">Min Range</label>
-      <input  type="text" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
-      <label class="inputMinMax" for="maxRange">Max Range</label>
-      <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
-    </h3>
+        <h3 id="minMax">
+          <label class="inputMinMax" for="minRange">Min Range</label>
+          <input  type="text" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
+          <label class="inputMinMax" for="maxRange">Max Range</label>
+          <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
+        </h3>
       <button type="button" onclick="minFunction(); maxFunction();">UPDATE</button>
-      </section>
+    </section>
     <br>
     <section class="first-column">
       <h2>The Current Range is <strong id="startNum">1</strong> to <strong id="endNum">100</strong> </h2>
-      <h3>Challenger 1</h3>
-      <label class="playerName" for="namePlayerOne">Name</label>
-      <input type="text" id="namePlayerOne" required>
-      <h3>Challenger 2</h3>
-      <label class="playerName" for="namePlayerTwo">Name</label>
-      <input type="text" id="namePlayerTwo" required>
+        <h3>Challenger 1</h3>
+          <h4 id="challengerOneInput">
+            <label class="playerName" for="namePlayerOne">Name</label>
+            <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
+            <input type="text" id="namePlayerOne" required placeholder="Player One Name">
+            <input type="text" id="guessPlayerOne" required placeholder="Player One Guess">
+          </h4>
+        <h3>Challenger 2</h3>
+          <h4 id="challengerTwoInput">
+            <label class="playerName" for="namePlayerTwo">Name</label>
+            <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
+            <input type="text" id="namePlayerTwo" required placeholder="Player Two Name">
+            <input type="text" id="guessPlayerTwo" required placeholder="Player Two Guess">
+          </h4>
+          <h4 id="buttonGalore">
+            <button type="button" onclick="">Submit Guess</button>
+            <button type="button" onclick="">Reset Game</button>
+            <button type="button" onclick="">Clear Game</button>
+          </h4>
     </section>
     <br>
     <section class="first-column">
