@@ -46,8 +46,8 @@
       #minMax>* {
         flex: 1 1 300px;
       }
-
-    #minMax :nth-child(2) { order:3; }
+      /*trying to figure out first box organization
+    #minMax :nth-child(2) { order:3; }*/
     
     .secondC {
         width: 50%;
@@ -70,13 +70,13 @@
       <label class="inputMinMax" for="minRange">Min Range</label>
       <input  type="text" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
       <label class="inputMinMax" for="maxRange">Max Range</label>
-      <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Minimum number">
+      <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
     </h3>
-      <button type="button">UPDATE</button>
+      <button type="button" onclick="minFunction(); maxFunction();">UPDATE</button>
       </section>
     <br>
     <section class="first-column">
-      <h2>The Current Range is to </h2>
+      <h2>The Current Range is <strong id="startNum">1</strong> to <strong id="endNum">100</strong> </h2>
       <h3>Challenger 1</h3>
       <label class="playerName" for="namePlayerOne">Name</label>
       <input type="text" id="namePlayerOne" required>
