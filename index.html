@@ -28,8 +28,12 @@
       #challengerOneInput {
         display: flex;
         flex-direction: column;
-    }
-      
+      }
+      #buttonGalore {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
 
     }
 /*desktop size*/
@@ -60,6 +64,10 @@
         width: 50%;
     }
 
+    #buttonGalore {
+      display: flex;
+      justify-content: space-around;
+    }
   } 
     </style>
 
@@ -73,6 +81,8 @@
 
   <div class="firstC">
     <section class="first-column">
+
+    <!---First Box First Column-->
       <h2> <strong> Set Range </strong></h2>
         <h3 id="minMax">
           <label class="inputMinMax" for="minRange">Min Range</label>
@@ -83,6 +93,8 @@
       <button type="button" onclick="minFunction(); maxFunction();">UPDATE</button>
     </section>
     <br>
+
+    <!---Second Box First Column-->
     <section class="first-column">
       <h2>The Current Range is <strong id="startNum">1</strong> to <strong id="endNum">100</strong> </h2>
         <h3>Challenger 1</h3>
@@ -106,17 +118,34 @@
           </h4>
     </section>
     <br>
+
+    <!---Third Box First Column-->
     <section class="first-column">
-      <h2>LATEST</h2>
+      <h2>Latest Score</h2>
+        <div id="scoreBoxes">
+          <div id="guessResultPlayerOne">
+            Challenger 1 <b id="resultNamePlayerOne">Name</b><br>
+            current guess<br>
+            <b id="playerOneRecordGuess">0</b><br>
+            <b id="funnyResultOne">Ummm..I am waiting..</b>
+          </div>
+          <div id="guessResultPlayerTwo">
+            Challenger 1 <b id="resultNamePlayerTwo">Name</b><br>
+            current guess<br>
+            <b id="playerTwoRecordGuess">0</b><br>
+            <b id="funnyResultTwo">Ummm..I am waiting..</b>
+          </div>
+      </div>
     </section>
   </div>
 
+  <!---Second Column-->
   <div class="secondC">
     <aside class="second-column">
     <h2>I am the second column</h2>
-    </aside>
+      </aside>
     <br>
-    <aside class="second-column">
+      <aside class="second-column">
         <h2>Challenger 2nd name</h2>
       </aside>
   </div>

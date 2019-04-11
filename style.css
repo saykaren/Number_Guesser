@@ -81,3 +81,9 @@ main {
   background-color: white;
   border: 2px solid rgba(97, 97, 97, .80);
 }
+
+/*Third Box in First Row - Container to flex results in column*/
+#scoreBoxes {
+  display: flex;
+  justify-content: space-around;
+}
