@@ -15,6 +15,9 @@ Functions:
   maxFunction() - End number
   nameOneFunction() - Player One Name
   nameTwoFunction() - Player Two Name
+  recordGuessPlayerOne() - Guess of player one
+  recordGuessPlayerTwo() - Guess of player two
+
 
 */
 function minFunction () {
@@ -25,11 +28,19 @@ function maxFunction () {
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
 }
 
-function nameOneFunction (){
+function nameOneFunction () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;
 }
 
-function nameTwoFunction (){
+function nameTwoFunction () {
   document.getElementById("resultNamePlayerTwo").innerHTML = document.getElementById("namePlayerTwo").value;
 }
 
+function recordGuessPlayerOne () {
+document.getElementById("playerOneRecordGuess").innterHTML = document.getElementById("guessPlayerOne").value;
+}
+
+function recordGuessPlayerTwo () {
+  document.getElementById("playerTwoRecordGuess").innterHTML = document.getElementById("guessPlayerTwo").value;
+  
+  }
