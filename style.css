@@ -70,7 +70,15 @@ main {
 }
 
 
+#minRange {
+  display: flex;
+  flex-direction: column;
+}
 
+#maxRange {
+  display: flex;
+  flex-direction: column;
+}
 
 .secondC {
   background-color: rgba(97, 97, 97, .65);
@@ -121,17 +129,14 @@ main {
         border-right: 2px solid  rgba(97, 97, 97, .5);
       }
 
-      #minMax {
+      #firstBoxColumn {
         display: flex;
-        flex-flow: row wrap;  
+        align-items: center;
+        
       }
+      
 
-      #minMax>* {
-        flex: 1 1 300px;
-      }
-      /*trying to figure out first box organization
-    #minMax :nth-child(2) { order:3; }*/
-    
+
     .secondC {
         width: 50%;
     }
