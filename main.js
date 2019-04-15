@@ -22,7 +22,7 @@ function minMaxFunction () {
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
 }
 
-nameOneFunction(); nameTwoFunction(); recordGuessPlayerOne()
+
 
 function nameFunctionAndGuess () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;
