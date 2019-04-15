@@ -86,4 +86,5 @@ main {
 #scoreBoxes {
   display: flex;
   justify-content: space-around;
+  
 }
