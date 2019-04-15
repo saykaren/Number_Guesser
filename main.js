@@ -11,12 +11,9 @@ change points:
   Comments: funnyResultOne / funnyResultTwo
   
 Functions:
-  minFunction() - Start number
-  maxFunction() - End number
-  nameOneFunction() - Player One Name
-  nameTwoFunction() - Player Two Name
-  recordGuessPlayerOne() - Guess of player one
-  recordGuessPlayerTwo() - Guess of player two
+  minMaxFunction - Start number and end number
+  nameFunctionAndGuess () - Player One Name / Player Two Name / Guess of player one / Guess of player two
+
 
 
 */
@@ -25,21 +22,12 @@ function minMaxFunction () {
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
 }
 
+nameOneFunction(); nameTwoFunction(); recordGuessPlayerOne()
 
-
-function nameOneFunction () {
+function nameFunctionAndGuess () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;
-}
-
-function nameTwoFunction () {
   document.getElementById("resultNamePlayerTwo").innerHTML = document.getElementById("namePlayerTwo").value;
-}
-
-function recordGuessPlayerOne () {
-document.getElementById("playerOneRecordGuess").innterHTML = document.getElementById("guessPlayerOne").value;
-}
-
-function recordGuessPlayerTwo () {
+  document.getElementById("playerOneRecordGuess").innterHTML = document.getElementById("guessPlayerOne").value;
   document.getElementById("playerTwoRecordGuess").innterHTML = document.getElementById("guessPlayerTwo").value;
-  
-  }
+}
+
