@@ -20,13 +20,12 @@ Functions:
 
 
 */
-function minFunction () {
+function minMaxFunction () {
   document.getElementById("startNum").innerHTML = document.getElementById("minRange").value;
-}
-
-function maxFunction () {
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
 }
+
+
 
 function nameOneFunction () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;

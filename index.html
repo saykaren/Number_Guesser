@@ -10,66 +10,6 @@
   <script src="main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<style>
-
-  /*mobile size*/
-    @media only screen and (max-width: 600px){
-    
-      .column-container {
-          flex: none;
-          justify-content: space-around;
-      }
-
-      #minMax {
-        display: flex;
-        flex-direction: column;
-      }
-
-      #challengerOneInput {
-        display: flex;
-        flex-direction: column;
-      }
-      #buttonGalore {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      }
-
-    }
-/*desktop size*/
-    @media only screen and (min-width: 600px){
-      
-      .column-container {
-          display: flex;
-          justify-content: space-around;
-      }
-
-      .firstC {
-        width: 50%;
-        border-right: 2px solid  rgba(97, 97, 97, .5);
-      }
-
-      #minMax {
-        display: flex;
-        flex-flow: row wrap;  
-      }
-
-      #minMax>* {
-        flex: 1 1 300px;
-      }
-      /*trying to figure out first box organization
-    #minMax :nth-child(2) { order:3; }*/
-    
-    .secondC {
-        width: 50%;
-    }
-
-    #buttonGalore {
-      display: flex;
-      justify-content: space-around;
-    }
-  } 
-    </style>
 
 <nav id="navbar">
   <p id="nav-title"><strong>Number</strong> Guesser<br></p>
@@ -90,7 +30,7 @@
           <label class="inputMinMax" for="maxRange">Max Range</label>
           <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
         </h3>
-      <button type="button" onclick="minFunction(); maxFunction();">UPDATE</button>
+      <button type="button" onclick="minMaxFunction();">UPDATE</button>
     </section>
     <br>
 

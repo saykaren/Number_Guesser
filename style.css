@@ -9,7 +9,7 @@ html {
   padding-bottom: 20px;
   text-align: center;
   border-top: 20px solid #6E6E6E;
-  border-right: 4px solid #6E6E6E;
+  /* not working border-right: 4px solid #6E6E6E;*/
   border-left: 4px solid #6E6E6E;
   line-height: 0.5px;
 }
@@ -88,3 +88,61 @@ main {
   justify-content: space-around;
   
 }
+
+  /*mobile size*/
+    @media only screen and (max-width: 600px){
+    
+      .column-container {
+          flex: none;
+        
+      }
+
+      #minMax {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #challengerOneInput {
+        display: flex;
+        flex-direction: column;
+      }
+      #buttonGalore {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+    }
+/*desktop size*/
+    @media only screen and (min-width: 600px){
+      
+      .column-container {
+          display: flex;
+          justify-content: space-around;
+      }
+
+      .firstC {
+        width: 50%;
+        border-right: 2px solid  rgba(97, 97, 97, .5);
+      }
+
+      #minMax {
+        display: flex;
+        flex-flow: row wrap;  
+      }
+
+      #minMax>* {
+        flex: 1 1 300px;
+      }
+      /*trying to figure out first box organization
+    #minMax :nth-child(2) { order:3; }*/
+    
+    .secondC {
+        width: 50%;
+    }
+
+    #buttonGalore {
+      display: flex;
+      justify-content: space-around;
+    }
+  } 
