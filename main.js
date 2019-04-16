@@ -31,3 +31,7 @@ function nameFunctionAndGuess () {
   document.getElementById("playerTwoRecordGuess").innterHTML = document.getElementById("guessPlayerTwo").value;
 }
 
+function myResetButton () {
+  document.getElementsByClassName('inputField').value= '';
+  document.getElementsByClassName('inputField').innterHTML = '';
+}
