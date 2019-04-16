@@ -101,9 +101,15 @@ function myResetButton () {
 }
 
 //Adding Results Element in second column
+
 function addElement () {
   var createDiv = document.createElement('div');
-  var textDiv = document.createTextNode("hello this will make sense later");
+  var textDiv = document.createTextNode(
+    document.getElementById('resultNamePlayerOne').innerHTML+ 
+    " versus " + document.getElementById('resultNamePlayerOne').innerHTML
+  );
+    
+  
   createDiv.appendChild(textDiv);
   var elementDiv = document.getElementById('resultsDiv');
   elementDiv.appendChild(createDiv);
