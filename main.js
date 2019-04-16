@@ -42,11 +42,12 @@ function myRandomInt (startNum, endNum) {
 } */
 
 
-function myRandomInt (startNum, endNum) {
-  const ranAnswer = parseInt(Math.random() * (endNum-startNum) + startNum);
+function myRandomInt (min, max) {
+  var min = Math.ceil(min);
+  var max = Math.floor(max);
+
+  const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
   console.log("Random Number is " + ranAnswer);
-  console.log("The start number is "+ startNum);
-  console.log("the end number is " +endNum);
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
   console.log("Player one result is "+playerOneResult);
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
