@@ -100,7 +100,7 @@ main {
   /*mobile size*/
     @media screen and (max-width: 600px){
     
-      #minMax {
+      #firstBoxColumn {
         display: flex;
         flex-direction: column;
       }

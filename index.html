@@ -27,11 +27,11 @@
       <section id="firstBoxColumn">
         <h3 id="minRange">
           <label class="inputMinMax" for="minRange">Min Range</label>
-          <input  type="text" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
+          <input  type="number" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
         </h3>
         <h3 id="maxRange">
           <label class="inputMinMax" for="maxRange">Max Range</label>
-          <input type="text" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
+          <input type="number" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
         </h3>
         <button type="button" onclick="minMaxFunction();">UPDATE</button>
       </section>
@@ -46,14 +46,14 @@
             <label class="playerName" for="namePlayerOne">Name</label>
             <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
             <input type="text" id="namePlayerOne" required placeholder="Player One Name">
-            <input type="text" id="guessPlayerOne" required placeholder="Player One Guess">
+            <input type="number" id="guessPlayerOne" required placeholder="Player One Guess">
           </h4>
         <h3>Challenger 2</h3>
           <h4 id="challengerTwoInput">
             <label class="playerName" for="namePlayerTwo">Name</label>
             <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
             <input type="text" id="namePlayerTwo" required placeholder="Player Two Name">
-            <input type="text" id="guessPlayerTwo" required placeholder="Player Two Guess">
+            <input type="number" id="guessPlayerTwo" required placeholder="Player Two Guess">
           </h4>
           <h4 id="buttonGalore">
             <button type="button" onclick="nameFunctionAndGuess();">Submit Guess</button>
