@@ -56,7 +56,7 @@
             <input type="number" id="guessPlayerTwo" class="inputField"  required placeholder="Player Two Guess">
           </h4>
           <h4 id="buttonGalore">
-            <button type="button" onclick="nameFunctionAndGuess();">Submit Guess</button>
+            <button type="button" onclick="nameFunctionAndGuess(); addElement();">Submit Guess</button>
             <button type="button" onclick='myResetButton'>Reset Game</button>
             <button type="button" onclick="">Clear Game</button>
           </h4>
@@ -86,8 +86,9 @@
   <!---Second Column-->
   <div class="secondC">
     <aside class="second-column">
-    <h2>I am the second column</h2>
+    <h2>Results</h2>
       </aside>
+    <div id="resultsDiv" class="second-column"></div>
     <br>
       <aside class="second-column">
         <h2>Challenger 2nd name</h2>

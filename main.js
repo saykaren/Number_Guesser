@@ -99,3 +99,12 @@ function myResetButton () {
   document.getElementsByClassName('inputField').value= '';
   document.getElementsByClassName('inputField').innterHTML = '';
 }
+
+//Adding Results Element in second column
+function addElement () {
+  var createDiv = document.createElement('div');
+  var textDiv = document.createTextNode("hello this will make sense later");
+  createDiv.appendChild(textDiv);
+  var elementDiv = document.getElementById('resultsDiv');
+  elementDiv.appendChild(createDiv);
+}
