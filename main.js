@@ -30,7 +30,7 @@ function minMaxFunction () {
 
 }
 
-
+//Random Function to Determine Random number then compare players guesses
 function myRandomInt (min, max) {
   var min = Math.ceil(min);
   var max = Math.floor(max);
@@ -79,24 +79,22 @@ function myRandomInt (min, max) {
 
 }
 
-
+//Function for Submit Button
 function nameFunctionAndGuess () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;
   document.getElementById("resultNamePlayerTwo").innerHTML = document.getElementById("namePlayerTwo").value;
   document.getElementById("playerOneRecordGuess").innerHTML = document.getElementById("guessPlayerOne").value;
   document.getElementById("playerTwoRecordGuess").innerHTML = document.getElementById("guessPlayerTwo").value;
-
-  document.getElementById("startNum").innerHTML = document.getElementById("minRange").value;
+  
   let startNum = document.getElementById("startNum").innerHTML;
   console.log("we are starting at "+startNum);
   
-  document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
   let endNum = document.getElementById("endNum").innerHTML;
   console.log("we are ending at "+endNum);
   myRandomInt(startNum, endNum);
-  
 }
 
+//Reset Button --- still working on 
 function myResetButton () {
   document.getElementsByClassName('inputField').value= '';
   document.getElementsByClassName('inputField').innterHTML = '';
