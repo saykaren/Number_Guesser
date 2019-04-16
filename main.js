@@ -43,33 +43,49 @@ function myRandomInt (startNum, endNum) {
 
 
 function myRandomInt (startNum, endNum) {
-  let ranAnswer = parseInt(Math.random() * (endNum-startNum) + startNum);
+  const ranAnswer = parseInt(Math.random() * (endNum-startNum) + startNum);
   console.log("Random Number is " + ranAnswer);
+  console.log("The start number is "+ startNum);
+  console.log("the end number is " +endNum);
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
   console.log("Player one result is "+playerOneResult);
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
   console.log("Player two result is "+playerTwoResult);
 
-  if (playerOneResult !== ranAnswer){
-    if (playerOneResult < ranAnswer){
-      console.log("Player One Too low, you lose")} 
+  if (playerOneResult !== ranAnswer) {
+    if (playerOneResult < ranAnswer) {
+      console.log("Player One Too low, you lose");
+      let tooLowOne = "Player One too low, you lose";
+      document.getElementById('funnyResultOne').innerHTML = tooLowOne;
+    } 
       else {
         console.log("Player One Too high!");
+        let tooHighOne = "Player One too high! You lose";
+        document.getElementById('funnyResultOne').innerHTML = tooHighOne;
       }
-    } else {
+  } else {
       console.log('Player One You Win!!!');
-    }
+      let oneWinner = "Winner! Player One!";
+      document.getElementById('funnyResultOne').innerHTML = oneWinner;
+  }
   
 
-  if (playerTwoResult !== ranAnswer){
-    if (playerTwoResult < ranAnswer){
-      console.log("Player Two too low, you lose")}
-      else{
-        console.log("Player Two, too high, you lose")
-      }
-    } else {
-      console.log('Player Two you Win!!')
+  if (playerTwoResult !== ranAnswer) {
+    if (playerTwoResult < ranAnswer) {
+      console.log("Player Two too low, you lose");
+      let tooLowTwo = "Player Two too low, you lose";
+      document.getElementById('funnyResultTwo').innerHTML = tooLowTwo;
     }
+      else{
+        console.log("Player Two, too high, you lose");
+        let tooHighTwo = "Player Two too high! You lose";
+        document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
+      }
+  } else {
+      console.log('Player Two you Win!!');
+      let twoWinner = "Winner! Player Two!";
+      document.getElementById('funnyResultTwo').innerHTML = twoWinner;
+  }
 }
 
 
