@@ -49,7 +49,29 @@ function myRandomInt (startNum, endNum) {
   console.log("Player one result is "+playerOneResult);
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
   console.log("Player two result is "+playerTwoResult);
+
+  if (playerOneResult !== ranAnswer){
+    if (playerOneResult < ranAnswer){
+      console.log("Player One Too low, you lose")} 
+      else {
+        console.log("Player One Too high!");
+      }
+    } else {
+      console.log('Player One You Win!!!');
+    }
+  
+
+  if (playerTwoResult !== ranAnswer){
+    if (playerTwoResult < ranAnswer){
+      console.log("Player Two too low, you lose")}
+      else{
+        console.log("Player Two, too high, you lose")
+      }
+    } else {
+      console.log('Player Two you Win!!')
+    }
 }
+
 
 function nameFunctionAndGuess () {
   document.getElementById("resultNamePlayerOne").innerHTML = document.getElementById("namePlayerOne").value;
@@ -65,6 +87,7 @@ function nameFunctionAndGuess () {
   let endNum = document.getElementById("endNum").innerHTML;
   console.log("we are ending at "+endNum);
   myRandomInt(startNum, endNum);
+  
 }
 
 function myResetButton () {
