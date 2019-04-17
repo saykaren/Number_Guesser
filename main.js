@@ -114,3 +114,10 @@ function addElement () {
   var elementDiv = document.getElementById('resultsDiv');
   elementDiv.appendChild(createDiv);
 }
+
+//Resource https://www.youtube.com/watch?v=OpajusnOfYo
+onkeyup="lettersOnly(this)"
+function lettersOnly (input) {
+  var regex = /[^a-z]/gi;
+  input.value = input.value.replace(regex, "");
+}

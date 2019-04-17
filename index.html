@@ -45,14 +45,14 @@
           <h4 id="challengerOneInput">
             <label class="playerName" for="namePlayerOne">Name</label>
             <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
-            <input type="text" id="namePlayerOne" class="inputField" required placeholder="Player One Name">
+            <input type="text" id="namePlayerOne" class="inputField" required placeholder="Player One Name" onkeyup="lettersOnly(this)">
             <input type="number" id="guessPlayerOne" class="inputField"  required placeholder="Player One Guess">
           </h4>
         <h3>Challenger 2</h3>
           <h4 id="challengerTwoInput">
             <label class="playerName" for="namePlayerTwo">Name</label>
             <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
-            <input type="text" id="namePlayerTwo" class="inputField"  required placeholder="Player Two Name">
+            <input type="text" id="namePlayerTwo" class="inputField"  required placeholder="Player Two Name" onkeyup="lettersOnly(this)">
             <input type="number" id="guessPlayerTwo" class="inputField"  required placeholder="Player Two Guess">
           </h4>
           <h4 id="buttonGalore">
