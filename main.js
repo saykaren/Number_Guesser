@@ -106,7 +106,7 @@ function addElement () {
   var createDiv = document.createElement('div');
   var textDiv = document.createTextNode(
     document.getElementById('resultNamePlayerOne').innerHTML+ 
-    " versus " + document.getElementById('resultNamePlayerOne').innerHTML
+    " versus " + document.getElementById('resultNamePlayerTwo').innerHTML
   );
     
   
