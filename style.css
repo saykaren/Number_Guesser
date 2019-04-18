@@ -152,11 +152,14 @@ main {
         
       }
       
+      .playerGuess {
+        padding-left: 28%;
+      }
 
 
-    .secondC {
+      .secondC {
         width: 50%;
-    }
+      }
 
     #buttonGalore {
       display: flex;

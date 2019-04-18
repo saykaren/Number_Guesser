@@ -44,16 +44,16 @@ function myRandomInt (min, max) {
 
    //Player One results qualifications 
   if (playerOneResult == ranAnswer) {
-    let oneWinner = "Winner! Player One!";
+    let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
   } else {
     if (playerOneResult < ranAnswer) {
       console.log("Player One Too low, you lose");
-      let tooLowOne = "Player One too low, you lose";
+      let tooLowOne = "that's too low";
       document.getElementById('funnyResultOne').innerHTML = tooLowOne;
     } else {
       console.log("Player One Too high!");
-      let tooHighOne = "Player One too high! You lose";
+      let tooHighOne = "that's too high";
       document.getElementById('funnyResultOne').innerHTML = tooHighOne;
     }
   }
@@ -62,17 +62,17 @@ function myRandomInt (min, max) {
   //Player Two Results Qualifications
   if (playerTwoResult == ranAnswer) {
     console.log('Player Two you Win!!');
-    let twoWinner = "Winner! Player Two!";
+    let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
   } else {
     if (playerTwoResult < ranAnswer) {
       console.log("Player Two too low, you lose");
-      let tooLowTwo = "Player Two too low, you lose";
+      let tooLowTwo = "that's too low";
       document.getElementById('funnyResultTwo').innerHTML = tooLowTwo;
     }
       else{
         console.log("Player Two, too high, you lose");
-        let tooHighTwo = "Player Two too high! You lose";
+        let tooHighTwo = "that's too low";
         document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
       }
   }
