@@ -47,6 +47,8 @@ function myRandomInt (min, max) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
     addElement();
+    var resultsOneWinner = document.getElementById(namePlayerOne).value;
+    
   } else {
     if (playerOneResult < ranAnswer) {
       console.log("Player One Too low, you lose");
@@ -66,19 +68,21 @@ function myRandomInt (min, max) {
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
     addElement();
+    var resultsTwoWinner = document.getElementById(namePlayerTwo).value;
+    
+     
   } else {
     if (playerTwoResult < ranAnswer) {
       console.log("Player Two too low, you lose");
       let tooLowTwo = "that's too low";
       document.getElementById('funnyResultTwo').innerHTML = tooLowTwo;
-    }
-      else{
+    } else{
         console.log("Player Two, too high, you lose");
-        let tooHighTwo = "that's too low";
+        let tooHighTwo = "that's too high";
         document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
       }
   }
-
+  return [ranAnswer, resultsOneWinner, resultsTwoWinner];
 }
 
 //Function for Submit Button
@@ -107,11 +111,16 @@ function myResetButton () {
 function addElement () {
   var createDiv = document.createElement('div');
   var textDiv = document.createTextNode(
-    document.getElementById('resultNamePlayerOne').innerHTML+ 
-    " versus " + document.getElementById('resultNamePlayerTwo').innerHTML
+    document.getElementById('resultNamePlayerOne').innerHTML
+    + 
+    " versus " 
+    + 
+    document.getElementById('resultNamePlayerTwo').innerHTML 
+    + 
+    "WINNER" 
+
   );
-    
-  
+   
   createDiv.appendChild(textDiv);
   var elementDiv = document.getElementById('resultsDiv');
   elementDiv.appendChild(createDiv);
