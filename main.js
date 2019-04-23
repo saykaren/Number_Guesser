@@ -46,6 +46,7 @@ function myRandomInt (min, max) {
   if (playerOneResult == ranAnswer) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
+    addElement();
   } else {
     if (playerOneResult < ranAnswer) {
       console.log("Player One Too low, you lose");
@@ -64,6 +65,7 @@ function myRandomInt (min, max) {
     console.log('Player Two you Win!!');
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
+    addElement();
   } else {
     if (playerTwoResult < ranAnswer) {
       console.log("Player Two too low, you lose");
