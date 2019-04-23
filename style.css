@@ -109,6 +109,16 @@ main {
   
 }
 
+/*overall score card styling*/
+.scoreCard {
+  
+}
+
+/*score card title styling*/
+#scoreTitle {
+  font-size: 40px;
+}
+
   /*mobile size*/
     @media screen and (max-width: 600px){
     

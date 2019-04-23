@@ -120,6 +120,9 @@ function addElement () {
     "WINNER" 
 
   );
+
+  createDiv.className = "scoreCard";
+  createDiv.id = "scoreTitle"
    
   createDiv.appendChild(textDiv);
   var elementDiv = document.getElementById('resultsDiv');
