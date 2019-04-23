@@ -110,23 +110,31 @@ function myResetButton () {
 
 function addElement () {
   var createDiv = document.createElement('div');
+  var createP = document.createElement('p');
   var textDiv = document.createTextNode(
     document.getElementById('resultNamePlayerOne').innerHTML
     + 
     " versus " 
     + 
     document.getElementById('resultNamePlayerTwo').innerHTML 
-    + 
-    "WINNER" 
-
+  );
+  var textP = document.createTextNode(
+    "CHALLENGER (code name here from minMaxFunction)" 
+    +
+    " WINNER" 
   );
 
   createDiv.className = "scoreCard";
-  createDiv.id = "scoreTitle"
+  createDiv.id = "scoreTitle";
+  createP.className = "scoreCard";
+  createP.id = "scoreDetails";
    
   createDiv.appendChild(textDiv);
+  createP.appendChild(textP);
   var elementDiv = document.getElementById('resultsDiv');
   elementDiv.appendChild(createDiv);
+  var elementP = document.getElementById('resultsDiv');
+  elementP.appendChild(createP);
 }
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
