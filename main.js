@@ -45,14 +45,15 @@ function myRandomInt (min, max) {
   console.log("Player two result is "+playerTwoResult);
 
   //Player One results qualifications 
-  if (playerOneResult == ranAnswer) {
+  if (playerOneResult == randomArray[0]) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
     addElement();
     var resultsOneWinner = document.getElementById('namePlayerOne').value; 
     console.log("testing resultsOneWinner = "+resultsOneWinner);
+    document.getElementById('scoreDetails').innerHTML = "Challenger "+ resultsOneWinner+" Winner";
   } else {
-    if (playerOneResult < ranAnswer) {
+    if (playerOneResult < randomArray[0]) {
       console.log("Player One Too low, you lose");
       let tooLowOne = "that's too low";
       document.getElementById('funnyResultOne').innerHTML = tooLowOne;
@@ -64,15 +65,15 @@ function myRandomInt (min, max) {
   }
 
   //Player Two Results Qualifications
-  if (playerTwoResult == ranAnswer) {
+  if (playerTwoResult == randomArray[0]) {
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
     addElement();
     var resultsTwoWinner = document.getElementById("namePlayerTwo").value;
     console.log("testing resultsTwoWinner = "+resultsTwoWinner);    
-    document.getElementById("scoreDetails").innerHTML = "Challenger One Winner";
+    document.getElementById("scoreDetails").innerHTML = "Challenger "+resultsTwoWinner+" Winner";
   } else {
-    if (playerTwoResult < ranAnswer) {
+    if (playerTwoResult < randomArray[0]) {
       console.log("Player Two too low, you lose");
       let tooLowTwo = "that's too low";
       document.getElementById('funnyResultTwo').innerHTML = tooLowTwo;
@@ -83,7 +84,17 @@ function myRandomInt (min, max) {
       }
   }
   console.log("Testing function myRandomInter: Random number is "+ranAnswer+ ". Then results player one is "+resultsOneWinner+". Results for player two is "+resultsTwoWinner);
-  return [ranAnswer, resultsOneWinner, resultsTwoWinner];
+  var importantResults = [];
+  importantResults.push(randomArray);
+  
+  //If Statement to push into variable important results
+  if (resultsOneWinner !== undefined){
+    importantResults.push(resultsOneWinner);
+  }
+  if (resultsTwoWinner !== undefined){
+    importantResults.push(resultsTwoWinner);
+  }
+  return importantResults;
 }
 
 //Function for Submit Button
