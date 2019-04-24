@@ -27,6 +27,10 @@ html {
   color: white;
 }
 
+h2 {
+  font-size: 15px;
+}
+
 button {
   color: #FFFFFF;
   background-color: #6E6E6E;  
@@ -89,7 +93,6 @@ main {
 
 .second-column {
   background-color: white;
-  border: 2px solid rgba(97, 97, 97, .80);
 }
 
 /*Third Box in First Row - Container to flex results in column*/
@@ -107,7 +110,12 @@ main {
 
 /*score card title styling*/
 #scoreTitle {
-  font-size: 40px;
+  font-size: 22px;
+  border: .5px solid rgba(97, 97, 97, .80);
+}
+
+#scoreDetails {
+  font-size: 30px;
 }
 
   /*mobile size*/

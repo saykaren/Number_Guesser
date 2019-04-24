@@ -34,10 +34,11 @@ function minMaxFunction () {
 function myRandomInt (min, max) {
   var min = Math.ceil(min);
   var max = Math.floor(max);
-
+  let randomArray = [];
   /*Generate random number and setting players guess*/
   const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
-  console.log("Random Number is " + ranAnswer);
+  randomArray.push(ranAnswer);
+  console.log("Random Number in array is" + randomArray[0]);
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
   console.log("Player one result is "+playerOneResult);
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
@@ -48,7 +49,8 @@ function myRandomInt (min, max) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
     addElement();
-    var resultsOneWinner = document.getElementById(namePlayerOne).value; 
+    var resultsOneWinner = document.getElementById('namePlayerOne').value; 
+    console.log("testing resultsOneWinner = "+resultsOneWinner);
   } else {
     if (playerOneResult < ranAnswer) {
       console.log("Player One Too low, you lose");
@@ -66,7 +68,9 @@ function myRandomInt (min, max) {
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
     addElement();
-    var resultsTwoWinner = document.getElementById(namePlayerTwo).value;     
+    var resultsTwoWinner = document.getElementById("namePlayerTwo").value;
+    console.log("testing resultsTwoWinner = "+resultsTwoWinner);    
+    document.getElementById("scoreDetails").innerHTML = "Challenger One Winner";
   } else {
     if (playerTwoResult < ranAnswer) {
       console.log("Player Two too low, you lose");
@@ -110,12 +114,12 @@ function addElement () {
   var textDiv = document.createTextNode(
     document.getElementById('resultNamePlayerOne').innerHTML
     + 
-    " versus " 
+    " VS " 
     + 
     document.getElementById('resultNamePlayerTwo').innerHTML 
   );
   var textP = document.createTextNode(
-    "CHALLENGER (code name here from minMaxFunction)" 
+    "CHALLENGER"
     +
     " WINNER" 
   );
