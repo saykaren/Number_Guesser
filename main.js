@@ -18,16 +18,16 @@ Functions:
 
 
 function minMaxFunction () {
+  /*Setting range for minimum range number based upon input*/
   document.getElementById("startNum").innerHTML = document.getElementById("minRange").value;
   let startNum = document.getElementById("startNum").innerHTML;
   console.log("we are starting at "+startNum);
   
+  /*Setting range for maximum range number based upon input*/
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
   let endNum = document.getElementById("endNum").innerHTML;
   console.log("we are ending at "+endNum);
   return startNum, endNum;
-
-
 }
 
 //Random Function to Determine Random number then compare players guesses
@@ -35,6 +35,7 @@ function myRandomInt (min, max) {
   var min = Math.ceil(min);
   var max = Math.floor(max);
 
+  /*Generate random number and setting players guess*/
   const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
   console.log("Random Number is " + ranAnswer);
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
@@ -42,13 +43,12 @@ function myRandomInt (min, max) {
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
   console.log("Player two result is "+playerTwoResult);
 
-   //Player One results qualifications 
+  //Player One results qualifications 
   if (playerOneResult == ranAnswer) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
     addElement();
-    var resultsOneWinner = document.getElementById(namePlayerOne).value;
-    
+    var resultsOneWinner = document.getElementById(namePlayerOne).value; 
   } else {
     if (playerOneResult < ranAnswer) {
       console.log("Player One Too low, you lose");
@@ -61,16 +61,12 @@ function myRandomInt (min, max) {
     }
   }
 
-  
   //Player Two Results Qualifications
   if (playerTwoResult == ranAnswer) {
-    console.log('Player Two you Win!!');
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
     addElement();
-    var resultsTwoWinner = document.getElementById(namePlayerTwo).value;
-    
-     
+    var resultsTwoWinner = document.getElementById(namePlayerTwo).value;     
   } else {
     if (playerTwoResult < ranAnswer) {
       console.log("Player Two too low, you lose");
@@ -82,6 +78,7 @@ function myRandomInt (min, max) {
         document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
       }
   }
+  console.log("Testing function myRandomInter: Random number is "+ranAnswer+ ". Then results player one is "+resultsOneWinner+". Results for player two is "+resultsTwoWinner);
   return [ranAnswer, resultsOneWinner, resultsTwoWinner];
 }
 
@@ -107,7 +104,6 @@ function myResetButton () {
 }
 
 //Adding Results Element in second column
-
 function addElement () {
   var createDiv = document.createElement('div');
   var createP = document.createElement('p');

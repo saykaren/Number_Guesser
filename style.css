@@ -2,6 +2,7 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
+
 #navbar {
   background-color: black;
   position: fixed;
@@ -25,7 +26,6 @@ html {
 #nav-sub {
   color: white;
 }
-
 
 button {
   color: #FFFFFF;
@@ -63,16 +63,13 @@ main {
   background-color:  #F7F7F7;
   border: 2px solid #F7F7F7;
   padding: 10px;
-  
 }
 
 .first-column {
   background-color: white;
   border: 2px solid rgba(97, 97, 97, .5);
   padding: 14px;
-  
 }
-
 
 #minRange {
   display: flex;
@@ -89,6 +86,7 @@ main {
   text-align: center;
   padding: 10px;
 }
+
 .second-column {
   background-color: white;
   border: 2px solid rgba(97, 97, 97, .80);
@@ -99,19 +97,12 @@ main {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  
 }
 
 .recordGuess {
   color: #DD1972;
   font-family: "Open Sans";
   font-size: 60px;
-  
-}
-
-/*overall score card styling*/
-.scoreCard {
-  
 }
 
 /*score card title styling*/
@@ -132,14 +123,15 @@ main {
         display: flex;
         flex-direction: column;
       }
+
       #buttonGalore {
       display: flex;
       flex-direction: column;
       justify-content: center;
       }
-
     }
-/*desktop size*/
+  
+    /*desktop size*/
     @media screen and (min-width: 600px){
       
       .column-container {
@@ -155,13 +147,11 @@ main {
       #firstBoxColumn {
         display: flex;
         align-items: center;
-        
       }
       
       .playerGuess {
         padding-left: 28%;
       }
-
 
       .secondC {
         width: 50%;
@@ -172,3 +162,8 @@ main {
       justify-content: space-around;
     }
   } 
+
+  #footer {
+    background-color: black;
+    color: #DD1972;
+  }

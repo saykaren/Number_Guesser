@@ -18,101 +18,89 @@
 
 <main>
   <section class="column-container">
+    <div class="firstC">
+      <section class="first-column">
 
-  <div class="firstC">
-    <section class="first-column">
+        <!---First Box First Column-->
+        <h2> <strong> Set Range </strong></h2>
+          <section id="firstBoxColumn">
+            <h3>
+              <label class="inputMinMax" for="minRange">Min Range</label>
+              <input  type="number" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
+            </h3>
+            <h3>
+              <label class="inputMinMax" for="maxRange">Max Range</label>
+              <input type="number" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
+            </h3>
+            <button type="button" onclick="minMaxFunction();">UPDATE</button>
+          </section>
+        </section>
+      <br>
 
-    <!---First Box First Column-->
-      <h2> <strong> Set Range </strong></h2>
-      <section id="firstBoxColumn">
-        <h3>
-          <label class="inputMinMax" for="minRange">Min Range</label>
-          <input  type="number" id="minRange" required min="0" max="1000000" step="1" placeholder="Minimum number">
-        </h3>
-        <h3>
-          <label class="inputMinMax" for="maxRange">Max Range</label>
-          <input type="number" id="maxRange" required min="10" max="1000000" step="1" placeholder="Maximum number">
-        </h3>
-        <button type="button" onclick="minMaxFunction();">UPDATE</button>
+      <!---Second Box First Column-->
+      <section class="first-column">
+        <h2>The Current Range is <strong id="startNum">1</strong> to <strong id="endNum">100</strong> </h2>
+          <h3>Challenger 1</h3>
+            <h4 id="challengerOneInput">
+              <label class="playerName" for="namePlayerOne">Name</label>
+              <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
+              <input type="text" id="namePlayerOne" class="inputField" required placeholder="Player One Name" onkeyup="lettersOnly(this)">
+              <input type="number" id="guessPlayerOne" class="inputField"  required placeholder="Player One Guess">
+            </h4>
+          <h3>Challenger 2</h3>
+            <h4 id="challengerTwoInput">
+              <label class="playerName" for="namePlayerTwo">Name</label>
+              <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
+              <input type="text" id="namePlayerTwo" class="inputField"  required placeholder="Player Two Name" onkeyup="lettersOnly(this)">
+              <input type="number" id="guessPlayerTwo" class="inputField"  required placeholder="Player Two Guess">
+            </h4>
+            <h4 id="buttonGalore">
+              <button type="button" onclick="nameFunctionAndGuess();">Submit Guess</button>
+              <button type="button" onclick='myResetButton'>Reset Game</button>
+              <button type="button" onclick="">Clear Game</button>
+            </h4>
       </section>
-    </section>
-    <br>
+      <br>
 
-    <!---Second Box First Column-->
-    <section class="first-column">
-      <h2>The Current Range is <strong id="startNum">1</strong> to <strong id="endNum">100</strong> </h2>
-        <h3>Challenger 1</h3>
-          <h4 id="challengerOneInput">
-            <label class="playerName" for="namePlayerOne">Name</label>
-            <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
-            <input type="text" id="namePlayerOne" class="inputField" required placeholder="Player One Name" onkeyup="lettersOnly(this)">
-            <input type="number" id="guessPlayerOne" class="inputField"  required placeholder="Player One Guess">
-          </h4>
-        <h3>Challenger 2</h3>
-          <h4 id="challengerTwoInput">
-            <label class="playerName" for="namePlayerTwo">Name</label>
-            <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
-            <input type="text" id="namePlayerTwo" class="inputField"  required placeholder="Player Two Name" onkeyup="lettersOnly(this)">
-            <input type="number" id="guessPlayerTwo" class="inputField"  required placeholder="Player Two Guess">
-          </h4>
-          <h4 id="buttonGalore">
-            <button type="button" onclick="nameFunctionAndGuess();">Submit Guess</button>
-            <button type="button" onclick='myResetButton'>Reset Game</button>
-            <button type="button" onclick="">Clear Game</button>
-          </h4>
-    </section>
-    <br>
-
-    <!---Third Box First Column-->
-    <section class="first-column">
-      <h2>Latest Score</h2>
+      <!---Third Box First Column-->
+      <section class="first-column">
+        <h2>Latest Score</h2>
         <div id="scoreBoxes">
           <div id="guessResultPlayerOne">
             <strong>Challenger 1 <b id="resultNamePlayerOne">Name</b><br></strong>
-            current guess<br>
+              current guess<br>
             <b id="playerOneRecordGuess" class="recordGuess">0</b><br>
             <div id="funnyResultOne">Ummm..I am waiting..</div>
           </div>
           <div id="guessResultPlayerTwo">
             <strong>Challenger 2 <b id="resultNamePlayerTwo">Name</b><br></strong>
-            current guess<br>
+              current guess<br>
             <b id="playerTwoRecordGuess" class="recordGuess">0</b><br>
             <div id="funnyResultTwo">Ummm..I am waiting..</div>
           </div>
-      </div>
-    </section>
-  </div>
+        </div>
+      </section>
+    </div>
 
-  <!---Second Column-->
-  <div class="secondC">
-    <aside class="second-column">
-    <h2>Results</h2>
+    <!---Second Column-->
+    <div class="secondC">
+      <aside class="second-column">
+        <h2>
+          Results
+        </h2>
       </aside>
-    <div id="resultsDiv" class="second-column"></div>
-    <p id="resultsP"></p>
-    <br>
-
-  </div>
+      <div id="resultsDiv" class="second-column">  
+      </div>
+      <p id="resultsP">
+      </p>
+      <br>
+    </div>
   </section>
-
 
 </main>
 
-
-
-
-<body>
-<section>
-  <div>
-
-  </div>
-
-</section>
-</body>
-
-<footer>
-
-  
+<footer id="footer">
+   <strong>Author:</strong> Karen Garcia <strong>Creation Date:</strong> April 2019
 </footer>
 
 </html>
