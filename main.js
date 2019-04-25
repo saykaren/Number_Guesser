@@ -16,91 +16,92 @@ Functions:
 
 */
 
+//Random set function Globally
+var outsideRandomGlobal = 0;
+
+var initialStartNum = document.getElementById("startNum").value;
+console.log({initialStartNum});
+var initialEndNum = document.getElementById("endNum").value;
+console.log({initialStartNum});
+window.onload = myRandomInt(initialStartNum, initialEndNum);
+
+/*function() {
+  var startNum = document.getElementById("startNum").innerHTM;
+  var endNum = document.getElementById("endNum").innerHTML
+  myRandomInt(startNum, endNum);
+  console.log({outsideRandomGlobal})
+} */
 
 function minMaxFunction () {
   /*Setting range for minimum range number based upon input*/
   document.getElementById("startNum").innerHTML = document.getElementById("minRange").value;
   let startNum = document.getElementById("startNum").innerHTML;
-  console.log("we are starting at "+startNum);
+  console.log({startNum});
   
   /*Setting range for maximum range number based upon input*/
   document.getElementById("endNum").innerHTML = document.getElementById("maxRange").value;
   let endNum = document.getElementById("endNum").innerHTML;
   console.log("we are ending at "+endNum);
+
+  //update random global variable
+  myRandomInt(startNum, endNum);
+
   return startNum, endNum;
 }
 
-var outsideRandom = [];
 
-
-//Random Function to Determine Random number then compare players guesses
+//Random Function to Determine Random number
 function myRandomInt (min, max) {
   var min = Math.ceil(min);
   var max = Math.floor(max);
   let randomArray = [];
   /*Generate random number and setting players guess*/
   const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
-  randomArray.push(ranAnswer);
+  outsideRandomGlobal = ranAnswer;
+}
   
-  console.log("Random Number in array is" + randomArray[0]);
+function comparePlayerGuesses () {
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
-  console.log("Player one result is "+playerOneResult);
+  console.log({playerOneResult});
   let playerTwoResult = document.getElementById('playerTwoRecordGuess').innerHTML;
-  console.log("Player two result is "+playerTwoResult);
+  console.log({playerTwoResult});
 
   //Player One results qualifications 
-  if (playerOneResult == randomArray[0]) {
+  if (playerOneResult == outsideRandomGlobal) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
     addElement();
     var resultsOneWinner = document.getElementById('namePlayerOne').value; 
-    console.log("testing resultsOneWinner = "+resultsOneWinner);
+    console.log({resultsOneWinner});
     document.getElementById('scoreDetails').innerHTML = "Challenger "+ resultsOneWinner+" Winner";
   } else {
-    if (playerOneResult < randomArray[0]) {
-      console.log("Player One Too low, you lose");
+    if (playerOneResult < outsideRandomGlobal) {
       let tooLowOne = "that's too low";
       document.getElementById('funnyResultOne').innerHTML = tooLowOne;
     } else {
-      console.log("Player One Too high!");
       let tooHighOne = "that's too high";
       document.getElementById('funnyResultOne').innerHTML = tooHighOne;
     }
   }
 
   //Player Two Results Qualifications
-  if (playerTwoResult == randomArray[0]) {
+  if (playerTwoResult == outsideRandomGlobal) {
     let twoWinner = "Winner!";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
     addElement();
     var resultsTwoWinner = document.getElementById("namePlayerTwo").value;
-    console.log("testing resultsTwoWinner = "+resultsTwoWinner);    
+    console.log({resultsTwoWinner});    
     document.getElementById("scoreDetails").innerHTML = "Challenger "+resultsTwoWinner+" Winner";
   } else {
-    if (playerTwoResult < randomArray[0]) {
-      console.log("Player Two too low, you lose");
+    if (playerTwoResult < outsideRandomGlobal) {
       let tooLowTwo = "that's too low";
       document.getElementById('funnyResultTwo').innerHTML = tooLowTwo;
     } else{
-        console.log("Player Two, too high, you lose");
         let tooHighTwo = "that's too high";
         document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
       }
   }
-  console.log("Testing function myRandomInter: Random number is "+ranAnswer+ ". Then results player one is "+resultsOneWinner+". Results for player two is "+resultsTwoWinner);
-  var importantResults = [];
-  importantResults.push(randomArray);
-  
-  //If Statement to push into variable important results
-  if (resultsOneWinner !== undefined){
-    importantResults.push(resultsOneWinner);
-  }
-  if (resultsTwoWinner !== undefined){
-    importantResults.push(resultsTwoWinner);
-  }
-
-  outsideRandom.push(randAnswer);
-  console.log(outsideRandom[0]);
+  console.log({ranAnswer}+ {resultsOneWinner}+ {resultsTwoWinner});
 }
 
 //Function for Submit Button
@@ -115,7 +116,7 @@ function nameFunctionAndGuess () {
   
   let endNum = document.getElementById("endNum").innerHTML;
   console.log("we are ending at "+endNum);
-  myRandomInt(startNum, endNum);
+  
 }
 
 //Reset Button --- still working on 
