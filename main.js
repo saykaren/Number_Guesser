@@ -30,6 +30,9 @@ function minMaxFunction () {
   return startNum, endNum;
 }
 
+var outsideRandom = [];
+
+
 //Random Function to Determine Random number then compare players guesses
 function myRandomInt (min, max) {
   var min = Math.ceil(min);
@@ -38,6 +41,7 @@ function myRandomInt (min, max) {
   /*Generate random number and setting players guess*/
   const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
   randomArray.push(ranAnswer);
+  
   console.log("Random Number in array is" + randomArray[0]);
   let playerOneResult = document.getElementById('playerOneRecordGuess').innerHTML;
   console.log("Player one result is "+playerOneResult);
@@ -94,7 +98,9 @@ function myRandomInt (min, max) {
   if (resultsTwoWinner !== undefined){
     importantResults.push(resultsTwoWinner);
   }
-  return importantResults;
+
+  outsideRandom.push(randAnswer);
+  console.log(outsideRandom[0]);
 }
 
 //Function for Submit Button
