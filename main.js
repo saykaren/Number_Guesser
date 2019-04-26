@@ -19,18 +19,7 @@ Functions:
 //Random set function Globally
 var outsideRandomGlobal = 0;
 
-var initialStartNum = document.getElementById("startNum").value;
-console.log({initialStartNum});
-var initialEndNum = document.getElementById("endNum").value;
-console.log({initialStartNum});
-window.onload = myRandomInt(initialStartNum, initialEndNum);
-
-/*function() {
-  var startNum = document.getElementById("startNum").innerHTM;
-  var endNum = document.getElementById("endNum").innerHTML
-  myRandomInt(startNum, endNum);
-  console.log({outsideRandomGlobal})
-} */
+window.onload = myRandomInt(1, 100);
 
 function minMaxFunction () {
   /*Setting range for minimum range number based upon input*/
