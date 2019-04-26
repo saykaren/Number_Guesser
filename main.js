@@ -64,7 +64,7 @@ function comparePlayerGuesses () {
     addElement();
     var resultsOneWinner = document.getElementById('namePlayerOne').value; 
     console.log({resultsOneWinner});
-    document.getElementById('scoreDetails').innerHTML = "Challenger "+ resultsOneWinner+" Winner";
+    document.getElementById('scoreDetails').innerHTML = "Challenger 1 "+ resultsOneWinner+" Winner";
   } else {
     if (playerOneResult < outsideRandomGlobal) {
       let tooLowOne = "that's too low";
@@ -82,7 +82,7 @@ function comparePlayerGuesses () {
     addElement();
     var resultsTwoWinner = document.getElementById("namePlayerTwo").value;
     console.log({resultsTwoWinner});    
-    document.getElementById("scoreDetails").innerHTML = "Challenger "+resultsTwoWinner+" Winner";
+    document.getElementById("scoreDetails").innerHTML = "Challenger 2 "+resultsTwoWinner+" Winner";
   } else {
     if (playerTwoResult < outsideRandomGlobal) {
       let tooLowTwo = "that's too low";
