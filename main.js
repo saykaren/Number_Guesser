@@ -18,6 +18,8 @@ Functions:
 
 //Random set function Globally
 var outsideRandomGlobal = 0;
+var guessCountGame = 0;
+
 
 window.onload = myRandomInt(1, 100);
 
@@ -107,6 +109,7 @@ function nameFunctionAndGuess () {
   console.log({endNum});
   
   comparePlayerGuesses();
+  guessAdder();
 }
 
 //Reset Button --- still working on 
@@ -150,4 +153,9 @@ onkeyup="lettersOnly(this)"
 function lettersOnly (input) {
   var regex = /[^a-z]/gi;
   input.value = input.value.replace(regex, "");
+}
+
+//Function to count how many guesses until a winner is determined 
+function guessAdder() {
+  guessCountGame ++;
 }
