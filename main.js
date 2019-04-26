@@ -122,6 +122,7 @@ function myResetButton () {
 function addElement () {
   var createDiv = document.createElement('div');
   var createP = document.createElement('p');
+  var createDivFooter = document.createElement('div');
   var textDiv = document.createTextNode(
     document.getElementById('resultNamePlayerOne').innerHTML
     + 
@@ -134,18 +135,25 @@ function addElement () {
     +
     " WINNER" 
   );
+  var textDivFooter = document.createTextNode(
+    guessCountGame+" GUESSES"
+  )
 
   createDiv.className = "scoreCard";
   createDiv.id = "scoreTitle";
   createP.className = "scoreCard";
   createP.id = "scoreDetails";
+  createDivFooter.id = "scoreFooter";
    
   createDiv.appendChild(textDiv);
   createP.appendChild(textP);
+  createDivFooter.appendChild(textDivFooter);
   var elementDiv = document.getElementById('resultsDiv');
   elementDiv.appendChild(createDiv);
   var elementP = document.getElementById('resultsDiv');
   elementP.appendChild(createP);
+  var elementDivFooter = document.getElementById('resultsDiv');
+  elementDivFooter.appendChild(createDivFooter);
 }
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
