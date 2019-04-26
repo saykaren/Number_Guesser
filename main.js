@@ -90,7 +90,7 @@ function comparePlayerGuesses () {
         document.getElementById('funnyResultTwo').innerHTML = tooHighTwo;
       }
   }
-  console.log({ranAnswer}+ {resultsOneWinner}+ {resultsTwoWinner});
+  
 }
 
 //Function for Submit Button
@@ -101,11 +101,12 @@ function nameFunctionAndGuess () {
   document.getElementById("playerTwoRecordGuess").innerHTML = document.getElementById("guessPlayerTwo").value;
   
   let startNum = document.getElementById("startNum").innerHTML;
-  console.log("we are starting at "+startNum);
+  console.log({startNum});
   
   let endNum = document.getElementById("endNum").innerHTML;
-  console.log("we are ending at "+endNum);
+  console.log({endNum});
   
+  comparePlayerGuesses();
 }
 
 //Reset Button --- still working on 
