@@ -118,6 +118,15 @@ function myResetButton () {
   document.getElementById('namePlayerTwo').value = '';
   document.getElementById('guessPlayerOne').value = '';
   document.getElementById('guessPlayerTwo').value = '';
+}
+
+//Clear Game Button
+function myClearButton () {
+  myResetButton();
+  var outsideRandomGlobal = 0;
+  var guessCountGame = 0;
+  var element = document.getElementById('resultsDiv');
+  element.parentNode.removeChild(element);
 
 }
 
