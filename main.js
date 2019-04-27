@@ -19,6 +19,7 @@ Functions:
 //Random set function Globally
 var outsideRandomGlobal = 0;
 var guessCountGame = 0;
+var gameFinalTimer;
 
 
 window.onload = myRandomInt(1, 100);
@@ -49,6 +50,8 @@ function myRandomInt (min, max) {
   /*Generate random number and setting players guess*/
   const ranAnswer = Math.floor(Math.random() * (max - min)) + min;
   outsideRandomGlobal = ranAnswer;
+  /*Starts timer*/
+  gameStartTimer();
 }
   
 function comparePlayerGuesses () {
@@ -132,6 +135,7 @@ function myClearButton () {
 
 //Adding Results Element in second column
 function addElement () {
+  gameEndTimer();
   var createDiv = document.createElement('div');
   var createP = document.createElement('p');
   var createDivFooter = document.createElement('div');
@@ -149,7 +153,7 @@ function addElement () {
   );
   var finalGuessCount = guessCountGame+1;
   var textDivFooter = document.createTextNode(
-    finalGuessCount+" GUESSES"
+    finalGuessCount+" GUESSES        "+gameFinalTimer+" SECONDS"
   )
 
   createDiv.className = "scoreCard";
@@ -170,6 +174,7 @@ function addElement () {
 
   guessCountGame=-1;
   myRandomInt(1, 100);
+  finalTimeAmount = 0;
 }
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
@@ -183,3 +188,23 @@ function lettersOnly (input) {
 function guessAdder() {
   guessCountGame ++;
 }
+
+//Timer functions
+var startTime, endTime;
+
+function gameStartTimer () {
+  startTime = new Date();
+};
+
+function gameEndTimer () {
+  endTime = new Date();
+  var timeDiff = endTime - startTime; //in ms
+  //remove ms
+  timeDiff /= 1000;
+
+  //get seconds
+  var finalTimeAmount = Math.round(timeDiff);
+  console.log({finalTimeAmount});
+  gameFinalTimer = finalTimeAmount;
+}
+
