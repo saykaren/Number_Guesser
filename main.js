@@ -147,6 +147,7 @@ function addElement () {
     +
     " WINNER" 
   );
+  guessCountGame++;
   var textDivFooter = document.createTextNode(
     guessCountGame+" GUESSES"
   )
