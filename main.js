@@ -147,9 +147,9 @@ function addElement () {
     +
     " WINNER" 
   );
-  guessCountGame++;
+  var finalGuessCount = guessCountGame+1;
   var textDivFooter = document.createTextNode(
-    guessCountGame+" GUESSES"
+    finalGuessCount+" GUESSES"
   )
 
   createDiv.className = "scoreCard";
@@ -167,6 +167,9 @@ function addElement () {
   elementP.appendChild(createP);
   var elementDivFooter = document.getElementById('resultsDiv');
   elementDivFooter.appendChild(createDivFooter);
+
+  guessCountGame=-1;
+  myRandomInt(1, 100);
 }
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
