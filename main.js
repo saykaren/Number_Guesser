@@ -112,10 +112,13 @@ function nameFunctionAndGuess () {
   guessAdder();
 }
 
-//Reset Button --- still working on 
+//Reset Button
 function myResetButton () {
-  document.getElementsByClassName('inputField').value= '';
-  document.getElementsByClassName('inputField').innterHTML = '';
+  document.getElementById('namePlayerOne').value = '';
+  document.getElementById('namePlayerTwo').value = '';
+  document.getElementById('guessPlayerOne').value = '';
+  document.getElementById('guessPlayerTwo').value = '';
+
 }
 
 //Adding Results Element in second column
