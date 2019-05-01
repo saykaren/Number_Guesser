@@ -64,10 +64,13 @@ function comparePlayerGuesses () {
   if (playerOneResult == outsideRandomGlobal) {
     let oneWinner = "Winner!";
     document.getElementById('funnyResultOne').innerHTML = oneWinner;
+    let TwoLoser = "Better luck next time";
+    document.getElementById('funnyResultTwo').innerHTML = TwoLoser;
     addElement();
     var resultsOneWinner = document.getElementById('namePlayerOne').value; 
     console.log({resultsOneWinner});
     document.getElementById('scoreDetails').innerHTML = "Challenger 1 "+ resultsOneWinner+" Winner";
+    
   } else {
     if (playerOneResult < outsideRandomGlobal) {
       let tooLowOne = "that's too low";
@@ -81,7 +84,9 @@ function comparePlayerGuesses () {
   //Player Two Results Qualifications
   if (playerTwoResult == outsideRandomGlobal) {
     let twoWinner = "Winner!";
+    let OneLoser = "Better luck next time";
     document.getElementById('funnyResultTwo').innerHTML = twoWinner;
+    document.getElementById('funnyResultOne').innerHTML = OneLoser;
     addElement();
     var resultsTwoWinner = document.getElementById("namePlayerTwo").value;
     console.log({resultsTwoWinner});    
