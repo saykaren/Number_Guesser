@@ -180,7 +180,10 @@ function addElement () {
   guessCountGame=-1;
   myRandomInt(1, 100);
   finalTimeAmount = 0;
+
 }
+
+
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
 onkeyup="lettersOnly(this)"
