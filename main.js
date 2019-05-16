@@ -144,6 +144,8 @@ function addElement () {
   var createDiv = document.createElement('div');
   var createP = document.createElement('p');
   var createDivFooter = document.createElement('div');
+  var buttonRemove = "X";
+  var createXButton = document.createElement('button');
   var textDiv = document.createTextNode(
     document.getElementById('resultNamePlayerOne').innerHTML
     + 
@@ -160,12 +162,13 @@ function addElement () {
   var textDivFooter = document.createTextNode(
     finalGuessCount+" GUESSES        "+gameFinalTimer+" SECONDS"
   )
-
+  
   createDiv.className = "scoreCard";
   createDiv.id = "scoreTitle";
   createP.className = "scoreCard";
   createP.id = "scoreDetails";
   createDivFooter.id = "scoreFooter";
+  createXButton.id = "xButton";
    
   createDiv.appendChild(textDiv);
   createP.appendChild(textP);
@@ -176,6 +179,15 @@ function addElement () {
   elementP.appendChild(createP);
   var elementDivFooter = document.getElementById('resultsDiv');
   elementDivFooter.appendChild(createDivFooter);
+  createDivFooter.append(createXButton);
+  createXButton.append(buttonRemove);
+
+  //X button need to clarify ID to be more specific 
+  createXButton.onclick = function(){
+    var elem = document.getElementById("resultsDiv");
+    elem.remove();
+    console.log("working");
+  };
 
   guessCountGame=-1;
   myRandomInt(1, 100);
@@ -184,6 +196,9 @@ function addElement () {
 }
 
 
+function hiButton(){
+  alert("Hello world");
+}
 
 //Resource https://www.youtube.com/watch?v=OpajusnOfYo
 onkeyup="lettersOnly(this)"

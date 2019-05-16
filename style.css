@@ -111,12 +111,23 @@ main {
 /*score card title styling*/
 #scoreTitle {
   font-size: 22px;
-  border: .5px solid rgba(97, 97, 97, .80);
+  border-bottom: solid #DD1972;
 }
 
 #scoreDetails {
   font-size: 30px;
+  font-weight: bold;
 }
+
+#scoreFooter {
+  border-top: solid #DD1972;
+}
+
+#xButton {
+  width: 25px;
+}
+
+
 
   /*mobile size*/
     @media screen and (max-width: 600px){
