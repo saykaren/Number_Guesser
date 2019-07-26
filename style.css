@@ -95,6 +95,10 @@ main {
   background-color: white;
 }
 
+#sayKaren {
+  height: 4rem;
+}
+
 /*Third Box in First Row - Container to flex results in column*/
 #scoreBoxes {
   display: flex;
